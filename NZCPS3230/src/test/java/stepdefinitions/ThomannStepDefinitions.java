@@ -149,7 +149,6 @@ public class ThomannStepDefinitions {
 
     @And("there should be at least {int} products in the search results")
     public void there_should_be_at_least_products_in_the_search_results(int expectedProductCount) {
-        // Update the CSS selector to accurately select product items in the search results based on the provided structure.
         List<WebElement> productItems = driver.findElements(By.cssSelector(".fx-product-list-entry"));
         assertTrue("There are less than " + expectedProductCount + " products in the search results.", productItems.size() >= expectedProductCount);
     }
@@ -194,9 +193,7 @@ public class ThomannStepDefinitions {
 
     @Then("I should be taken to the details page for that product")
     public void i_should_be_taken_to_the_details_page_for_that_product() {
-        // Wait for a specific element that indicates the product details page is loaded
-        // This could be a product title, a unique class or ID associated with the product details layout
-        // Replace 'uniqueProductDetailElement' with the actual selector for the element that confirms the product detail page.
+     
         By uniqueProductDetailElement = By.xpath("//h1[contains(@class, 'product-title') or @id='product-title']"); // Example XPath
         wait.until(ExpectedConditions.visibilityOfElementLocated(uniqueProductDetailElement));
 
