@@ -1,0 +1,8 @@
+{
+  "searchTerms": ["guitar", "drums", "keyboard"],
+  "productIds": ["12345", "67890", "24680"],
+  "userCredentials": {
+    "email": "testuser@example.com",
+    "password": "testpassword"
+  }
+}
